@@ -1,0 +1,21 @@
+text = input("Please enter a sentence").strip().lower()
+#change teh senctence to words
+words = text.split()
+
+#loop througj words and convert to pig latin
+
+new_words = []
+
+for word in words:
+    if word[0] in 'aioeu':
+        new_word = word+'yay'
+        new_words.append(new_word)
+    else:
+        length = len(word)
+        newword = word[1:]
+        #print(newword)
+        final_newword = newword+word[0]+'ay'
+        new_words.append(final_newword)
+        
+output = " ".join(new_words) 
+print(output)   
